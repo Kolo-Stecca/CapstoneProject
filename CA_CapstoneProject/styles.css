@@ -1,0 +1,566 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main Container */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Home page */
+.time-log-table, .task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Space between sections */
+}
+
+section {
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.project-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-list li {
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+p {
+    margin: 0;
+    color: #666;
+}
+
+/* Header */
+header {
+    background-color: black; /* Change this to match your navbar background */
+    color: rgb(0, 0, 0);
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+/* Navbar */
+.navbar {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between items */
+    flex-wrap: nowrap;
+    padding: 10px 20px; /* Padding for the navbar */
+}
+
+.logo {
+    width: 250px; /* Set a larger width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.hamburger {
+    display: none; /* Hide hamburger menu by default */
+    font-size: 30px; /* Adjust size for the hamburger icon */
+    color: white; /* Color for the hamburger icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-right: 20px; /* Space between hamburger and logo */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex; /* Use flexbox for links */
+    justify-content: center; /* Center links */
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.nav-links a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px; /* Padding for links */
+    white-space: nowrap;
+}
+
+.nav-links a:hover {
+    color: gray; /* Change background on hover */
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.executive-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.executive-links a {
+    display: block; /* Stack the links vertically */
+    padding: 5px 10px; /* Add some padding */
+    color: white; /* Change link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.executive-links a:hover {
+    color: gray; /* Change background on hover */
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+
+/* Logout Section */
+.logout {
+    display: flex; /* Use flexbox for logout section */
+    color: white;
+    align-items: center; /* Align items vertically */
+    text-decoration: none;
+}
+
+.logout a:hover{
+    color: gray;
+}
+
+/* Profile Image */
+.profile-img {
+    height: 30px; /* Set a fixed height for the profile image */
+    width: 30px; /* Set a fixed width for the profile image */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Space between image and text */
+}
+
+/* Login Form */
+.login-form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: left; /* Align text properly */
+    position: relative;
+    margin: auto; /* Center the form */
+}
+
+form {
+    display: inline; /* Ensure form is inline to avoid block display issues */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+input[type="text"], input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="submit"] {
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Error Messages */
+.errors {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
+    .nav-links {
+        display: none; /* Hide nav links by default on small screens */
+        flex-direction: row; /* Stack links vertically */
+        position: absolute; /* Position absolutely */
+        top: 60px; /* Adjust based on navbar height */
+        left: 0; /* Align to the left */
+        right: 0; /* Full width */
+        background-color: black; /* Background color */
+        z-index: 10; /* Ensure it appears above other content */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on small screens */
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.footer-links {
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #bbb;
+    margin-top: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Button Styles */
+.button {
+    display: inline-block; /* Makes the button respect width settings */
+    width: 100%; /* Set a fixed width for buttons */
+    padding: 12px; /* Consistent padding for better appearance */
+    background-color: #007BFF; /* Set a background color */
+    color: white; /* Set text color */
+    text-decoration: none; /* Removes underline for links */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    margin-top: 10px; /* Add margin above the button */
+    border: none; /* Remove default border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker shade on hover (optional) */
+}
+.button_task_custom {
+    display: inline-block;
+    padding: 15px 25px; /* Adjust the padding as needed */
+    margin-top: 12px;
+    margin-bottom: 20px;
+    background-color: #0056b3; /* Bootstrap primary color */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline for links */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.small-button {
+    display: inline-block; /* Ensures proper spacing and layout */
+    padding: 15px 20px; /* Smaller padding for a smaller button */
+    background-color: #007BFF; /* Use the same background color as other buttons */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    text-decoration: none; /* Remove underline */
+}
+
+.small-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Edit Button Styles */
+.edit-button {
+    display: inline-block; /* Makes the button respect width settings */
+    width: 100px; /* Set a fixed width for the edit button */
+    padding: 10px; /* Add some padding for better appearance */
+    text-align: center; /* Center the text */
+    border: none; /* Remove border */
+    background-color: #007BFF; /* Set a background color */
+    color: white; /* Set text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Add transition for hover effect */
+    margin: 5px; /* Optional: add margin around the button */
+}
+
+.edit-button:hover {
+    background-color: #0056b3; /* Darker shade on hover (optional) */
+}
+.button.edit {
+    background-color: #007BFF; /* Color for edit button */
+}
+
+.button.edit:hover {
+    background-color: #0056b3; /* Darker shade on hover for edit button */
+}
+
+.button.delete {
+    background-color: #dc3545; /* Color for delete button */
+}
+
+.button.delete:hover {
+    background-color: #c82333; /* Darker shade on hover for delete button */
+}
+
+.project-list {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.time-log-table, .task-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.time-log-table th, .task-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.time-log-table td, .task-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.time-log-table tr:hover, .task-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;      /* Centers vertically */
+    height: 100vh;            /* Takes full height of the viewport */
+    width: 100%;              /* Takes full width */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Input Styles */
+input, select, textarea {
+    width: 100% !important; /* Ensures uniform width */
+    margin-bottom: 10px;
+    padding: 10px; /* Consistent padding */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box; /* Prevents width issues from padding */
+}
+
+textarea {
+    height: 120px; /* Set a consistent height for notes */
+    resize: vertical;
+}
+
+/* Your Time Logs styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+input {
+    margin-bottom: 10px;
+    width: 100%;
+}
+.modal {
+    display: none; /* Ensure the modal is hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    width: 450px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Ensure the button and form stack vertically */
+    align-items: stretch; /* Align all items in the modal */
+    position: relative; /* Allows absolute positioning for close button */
+    margin: 0 auto; /* Center modal */
+}
+.close {
+    position: absolute; /* Position the close button absolutely */
+    right: 20px; /* Position from the right */
+    top: 20px; /* Position from the top */
+    font-size: 28px;
+    cursor: pointer;
+    color: black; /* Change color if needed */
+}
+
+.table-container {
+    margin: 20px auto; /* Center the container vertically with top and bottom margin */
+    padding: 20px 15px; /* Add padding to the top/bottom and left/right */
+    border: 1px solid #ddd; /* Border around the container */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    width: calc(100% - 30px); /* Full width minus padding (15px on each side) */
+    max-width: 1200px; /* Optional: set a maximum width for large screens */
+}
+
+/* Custom Add Task Form */
+.add-task-form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.add-task-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.add-task-form input[type="text"],
+.add-task-form select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-task-form .is-billable-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.add-task-form .is-billable-container label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-task-form input[type="submit"],
+.add-task-form input[type="button"] {
+    width: 100%;
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.add-task-form input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.add-task-form .cancel {
+    background: #ff4d4d;
+}
+
+.add-task-form .cancel:hover {
+    background: #cc0000;
+}
+
+.add-project-form {
+    background: white;
+    padding: 30px; /* Space inside the form */
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 450px; /* Set a fixed width for the form */
+    margin: 40px auto; /* Center the form horizontally and add vertical spacing */
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px; /* Add space between form groups */
+}
+
+.filter-container {
+    width: 100%; /* Make the container full width */
+    max-width: 800px; /* Set a maximum width if needed */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Add padding to the left and right */
+    box-sizing: border-box; /* Include padding in the total width */
+}
+
+#filterInput {
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Padding for input */
+    margin-bottom: 20px; /* Space below the input */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
